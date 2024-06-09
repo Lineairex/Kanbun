@@ -6,17 +6,6 @@
     @import '$styles';
 
     @include bar-styles;
-
-    a {
-        text-wrap: nowrap;
-        text-decoration: none;
-
-        transition: transform 0.3s ease;
-    }
-
-    a:hover {
-        transform: translateY(-20px);
-    }
 </style>
 
 <nav>
