@@ -28,5 +28,23 @@ $links-button-light: rgb(73, 37, 13);
         border: 4px solid $links-button-light;
         background-color: $links-button-light;
         color: $links-light;
+        border-spacing: 100px;
+        margin: 5px 20px;
+        text-wrap:nowrap;
+    }
+}
+
+@mixin text-styles {
+    .text {
+        padding: 15px 15vw;
+    }
+    ol li {
+        line-height: 50px;
+        font-size: 21px;
+    }
+
+    ul li {
+        line-height: 25px;
+        font-size: 15px;
     }
 }

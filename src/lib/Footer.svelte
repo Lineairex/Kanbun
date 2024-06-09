@@ -15,7 +15,7 @@
 
 <nav>
     <div>
-        <a href="/Prawa autorskie">Prawa autorskie</a>
+        <a href="/Polityka prywatnosci">Polityka prywatności</a>
         <a href="/Zasady korzystania">Zasady korzystania</a>
     </div>
     © 2024 Kanbun. Wszelkie prawa zastrzeżone.
