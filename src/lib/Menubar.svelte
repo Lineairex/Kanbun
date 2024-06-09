@@ -6,6 +6,10 @@
     @import '$styles';
 
     @include bar-styles;
+
+    nav {
+        box-shadow: 0px 5px 5px rgb(41, 32, 33);
+    }
 </style>
 
 <nav>

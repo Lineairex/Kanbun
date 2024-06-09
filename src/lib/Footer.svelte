@@ -6,6 +6,8 @@
         padding: 10px 20px;
         margin-top: auto;
         color: $bar-font-light;
+
+        box-shadow: 0px -5px 5px rgb(41, 32, 33);
     }
 
     a { 
