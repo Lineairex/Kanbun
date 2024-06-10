@@ -1,6 +1,6 @@
 <script>
-    import Menubar from "../lib/Menubar.svelte";
-    import Footer from "../lib/Footer.svelte";
+    import Menubar from "../lib/bars/Menubar.svelte";
+    import Footer from "../lib/bars/Footer.svelte";
 </script>
 
 <style lang="scss">

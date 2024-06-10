@@ -1,7 +1,3 @@
-<script>
-    import { slide } from 'svelte/transition';
-</script>
-
 <style lang="scss">
     @import '$styles';
 
