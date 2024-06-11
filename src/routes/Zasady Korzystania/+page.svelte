@@ -4,6 +4,8 @@
     @include text-styles;
 </style>
 
+<title>Zasady korzystania - Kanbun</title>
+
 <div class="text">
     <h1>Zasady korzystania z serwisu Kanbun</h1>
     <ol>

@@ -1,4 +1,7 @@
-<title>Main board - Kanbun</title>
+<title>Główna tablica - Kanbun</title>
 
-This is the main page
-    
+<script>
+    import Task from '../lib/kanban/Task.svelte';
+</script>
+
+<Task />

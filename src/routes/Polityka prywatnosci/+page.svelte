@@ -4,6 +4,8 @@
     @include text-styles;
 </style>
 
+<title>Polityka prywatności - Kanbun</title>
+
 <div class="text">
     <h1>Polityka prywatności</h1>
     <ol>

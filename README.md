@@ -1,5 +1,5 @@
 <div align=center>
-    <img src="./graphics/banner-bg.svg"/ height=150px>
+    <img src="./static/banner-bg.svg"/ height=150px>
 </div>
 
 **Kanbun** to przykładowa strona internetowa stworzona za pomocą frameworka Svelte oraz biblioteki komponentów Melt UI. Projekt skupia się na tablicy Kanban, która pozwala użytkownikom na organizowanie i zarządzanie swoimi zadaniami w różnych kategoriach.

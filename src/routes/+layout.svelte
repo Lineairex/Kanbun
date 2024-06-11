@@ -12,15 +12,10 @@
         margin: 0;
         padding: 0;
         background-color: $background;
-        color: $bar-font-light;
+        color: $bar-font-light; 
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-    }
-
-    .slot {
-        margin: 15px;
-        padding: 15px;
     }
 </style>
 
