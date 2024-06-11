@@ -1,5 +1,10 @@
 $bar-light: #312527ff;
 $bar-font-light: rgb(255, 250, 246);
+
+$ui-background: rgb(37, 26, 28);
+$ui-accent: rgb(131, 89, 98);
+$ui-text: rgb(255, 250, 246);
+
 $background: #402e32ff;
 $gray-light: #b5876dff;
 $blue-light: #3e8cccff;
@@ -60,7 +65,7 @@ $links-button-hover: rgb(110, 60, 26);
 
 @mixin text-styles {
     .text {
-        padding: 15px 15vw;
+        padding: 15px 10%;
     }
     ol li {
         line-height: 50px;
@@ -71,4 +76,12 @@ $links-button-hover: rgb(110, 60, 26);
         line-height: 25px;
         font-size: 15px;
     }
+}
+
+#circle-small {
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }

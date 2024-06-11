@@ -17,10 +17,12 @@
         flex-direction: column;
         min-height: 100vh;
     }
+
+    
 </style>
 
 <Menubar/>
 
-<div class="slot"><slot /></div>
+<div><slot /></div>
 
 <Footer/>
