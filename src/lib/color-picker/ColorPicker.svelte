@@ -18,7 +18,6 @@
   }
 
   let color = "#FFFFFF";
-  
 
 </script>
 
@@ -27,7 +26,7 @@
 
   .menuButton {
     border: 0;
-    background-color: {color};
+    background-color: $ui-background;
     border-radius: 15px;
   }
 
