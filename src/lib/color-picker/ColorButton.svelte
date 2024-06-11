@@ -2,14 +2,19 @@
     export let name = "Default Color";
     export let color = "#FFFFFF";
 
-    export let setColor: any;
+    export let id = '.color-circle';
 
-    function handleClick() {
-        setColor(color);
-    }
+    function setColor() {
+    const colorCircles = document.querySelectorAll(id);
+
+    colorCircles.forEach(circle => {
+      const circleElement = circle as HTMLElement;
+      circleElement.style.backgroundColor = color;
+    });
+  }
 </script>
 
-<button class="button option" on:click={handleClick}>
+<button class="button option" on:click={setColor}>
     <div id="circle-small" style="background: {color};"></div>
     <div class="name">{name}</div>
 </button>
@@ -23,14 +28,20 @@
         background-color: $ui-background;
         color: $ui-text;
         padding: 5px 5px;
-        width: fit-content;
 
         border-radius: 20px;
         border: 10px $ui-background;
 
         cursor: pointer;
 
+        transition: 0.15s ease;
+
         @include default-font;
+    }
+
+    .option:hover {
+        box-shadow:0px 0px 5px $ui-accent;
+        background-color: $ui-accent;
     }
 
     .name {

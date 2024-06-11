@@ -1,20 +1,12 @@
 <script lang="ts">
   import ColorButton from "./ColorButton.svelte";
   import { colors } from "./Colors";
+  import { slide } from 'svelte/transition';
 
   let showMenu = false;
 
   function toggleMenu() {
     showMenu = !showMenu;
-  }
-
-  function setColor(color: string) {
-    const colorCircles = document.querySelectorAll('.color-circle');
-
-    colorCircles.forEach(circle => {
-      const circleElement = circle as HTMLElement;
-      circleElement.style.backgroundColor = color;
-    });
   }
 
   let color = "#FFFFFF";
@@ -28,9 +20,18 @@
     border: 0;
     background-color: $ui-background;
     border-radius: 15px;
+    cursor: pointer;
+
+    transition: 0.15s ease;
+  }
+
+  .menuButton:hover {
+    background-color: $ui-accent;
+    box-shadow: 0px 0px 5px $ui-accent;
   }
 
   .menu {
+    position: absolute;
     background-color: $ui-background;
     width: fit-content;
     height: fit-content;
@@ -43,9 +44,9 @@
 </button>
 
 {#if showMenu}
-  <div class="menu">
+  <div class="menu" transition:slide={{ delay: 0, duration: 300, axis: 'y' }}>
     {#each colors as color}
-      <ColorButton name={color.name} color={color.colorBackground} {setColor}/>
+      <ColorButton name={color.name} color={color.colorBackground}/>
     {/each}
   </div>
 {/if}

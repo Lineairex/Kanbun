@@ -8,7 +8,7 @@
     }
 
     .zdjecie-info {
-        background-image: url("zrzut_ekranu.png");
+        background-image: url("kanban-office.jpg");
         background-position: center;
         background-size: cover;
         height: 500px;
