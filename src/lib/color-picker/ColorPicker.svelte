@@ -9,8 +9,6 @@
     showMenu = !showMenu;
   }
 
-  let color = "#FFFFFF";
-
 </script>
 
 <style lang="scss">

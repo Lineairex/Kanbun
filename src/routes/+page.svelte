@@ -30,7 +30,8 @@
         <div class="colors">
             <Task />
         </div>
-        Jakiś tekst, nie przesuwa się
+
+        <p>Jakiś tekst, nie przesuwa się</p>
     </div>
     
     <DynamicDiv />

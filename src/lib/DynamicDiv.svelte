@@ -1,38 +1,107 @@
 <script lang='ts'>
+    import { slide, fade } from 'svelte/transition';
+
     let num: number = 2; 
-    let elements = [
-        { number: 1, content: "kontent"}
-    ];
+    let elements = [ {number: 1, content: "To jest pierwszy element"} ];
 
     $: num, elements=elements;
 
     let newContent: string = "";
 
     function generateElement() {
-        elements.push({ number: num, content: newContent });
-        num++;
-        newContent = ""; 
+        if (newContent !== "") {
+            elements.push({ number: num, content: newContent });
+            num++;
+            newContent = ""; 
+        }
+    }
+
+    function handleClick(number: number) {
+        elements = elements.filter(element => element.number !== number);
     }
 </script>
 
-<style>
+<style lang='scss'>
+    @import "$styles";
+
     .content {
         align-items: center;
+    }
+
+    .input {
+        border: 5px red;
+        background-color: $ui-background;
+        color: $ui-text;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+
+    .button {
+        padding: 10px 20px;
+        background-color: $ui-background;
+        color: $ui-text;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: $ui-accent;
+    }
+
+    .element{
+        background-color: $ui-background;
+        width: fit-content;
+        border: 10px solid $ui-background;
+        border-radius: 15px;
+
+        transition: 0.3s ease;
+        margin: 10px;
+    }
+
+    .element:hover {
+        background-color: $ui-accent;
+        border: 10px solid $ui-accent;
+        box-shadow: 0px 0px 5px $ui-accent;
+    }
+
+    .elements {
+        display: flex;
+        flex-direction: column;
     }
 </style>
 
 <div class="content">
     <form on:submit|preventDefault={generateElement}>
-        <input bind:value={newContent} placeholder="Napisz coś...">
+        <input class="input" bind:value={newContent} placeholder="Napisz coś...">
         <button class="button" type="submit">
             Naciśnij by wygenerować nowy element
         </button>
     </form>
     
-    
-    {#each elements as element}
-    <div class='elements'>
-        {element.number}. {element.content}
+    <div class="elements">
+        {#each elements as element}
+        <button class='button element' on:click={() => handleClick(element.number)} transition:fade={{ delay: 0, duration: 300 }}>
+            {element.number}. {element.content}
+        </button>
+        {/each}
     </div>
-    {/each}
 </div>
