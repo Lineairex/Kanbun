@@ -94,15 +94,27 @@
         display: flex;
         flex-direction: column;
     }
+
+    hr {
+        color: $ui-accent;
+    }
+
+    h1 {
+        margin: 0;
+    }
 </style>
 
 <div class="content">
+    <h1>Lista zadań</h1>
+    <h5>Kliknięcie na zadanie usuwa je</h5>
     <form on:submit|preventDefault={generateElement}>
         <input class="input" bind:value={newContent} placeholder="Napisz coś...">
         <button class="button" type="submit">
             Dodaj nowy element
         </button>
     </form>
+
+    <hr />
     
     <div class="elements">
         {#each elements as element}

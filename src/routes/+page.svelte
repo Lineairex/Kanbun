@@ -10,6 +10,8 @@
 
     .kanban {
         padding: 30px 30px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .color-circle {
@@ -49,7 +51,6 @@
             <h1>Wybieracz kolorów</h1>
             <div class="color-circle"></div>
             <Task />
-            <p>Jakiś tekst, nie przesuwa się</p>
         </div>
     </div>
     
