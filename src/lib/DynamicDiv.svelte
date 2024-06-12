@@ -93,7 +93,7 @@
     <form on:submit|preventDefault={generateElement}>
         <input class="input" bind:value={newContent} placeholder="Napisz coś...">
         <button class="button" type="submit">
-            Naciśnij by wygenerować nowy element
+            DOdaj nowy element
         </button>
     </form>
     
