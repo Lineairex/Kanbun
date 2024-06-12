@@ -29,9 +29,12 @@
     }
 
     .input {
-        border: 5px red;
+        border: 1px solid $ui-background;
         background-color: $ui-background;
         color: $ui-text;
+        
+
+        transition: border-color 0.3s ease;
     }
 
     form {
@@ -43,13 +46,17 @@
 
     input {
         padding: 10px;
-        border: 1px solid #ccc;
         border-radius: 4px;
+        border: 1px solid $ui-background;
         font-size: 16px;
         width: 100%;
         max-width: 300px;
         box-sizing: border-box;
-        transition: border-color 0.3s ease;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .input:hover {
+        border-color: $ui-accent; 
     }
 
     .button {
@@ -93,7 +100,7 @@
     <form on:submit|preventDefault={generateElement}>
         <input class="input" bind:value={newContent} placeholder="Napisz coś...">
         <button class="button" type="submit">
-            DOdaj nowy element
+            Dodaj nowy element
         </button>
     </form>
     
